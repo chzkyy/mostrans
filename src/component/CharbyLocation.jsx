@@ -33,7 +33,8 @@ class CharbyLocation extends React.Component {
     }
 
     render() {
-        const { data } = this.state;
+        const { res } = this.state;
+        let data = Array.isArray(res) ? res : [res]; // if res is not an array, make it an array
         
         return (
             <div className='mb-5'>
