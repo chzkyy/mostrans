@@ -33,14 +33,14 @@ class CharbyLocation extends React.Component {
     }
 
     render() {
-        const { res } = this.state;
-        let data = Array.isArray(res) ? res : [res]; // if res is not an array, make it an array
+        const { data } = this.state;
+        let res = Array.isArray(data) ? data : [data]; 
         
         return (
             <div className='mb-5'>
                 <div className="container mt-5">
                     <div className="row">
-                        {data?.map(item => (
+                        {res?.map(item => (
                             <div className="col-md-3 justify-content-center d-flex mt-5" key={item.id} >
                                 <div className="card" style={{ width:250 }}>
                                     <img src={item.image} alt={item.name} className="card-img-top" />
